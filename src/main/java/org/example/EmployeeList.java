@@ -21,15 +21,15 @@ public class EmployeeList {
         return null;
     }
 
-    public void printPhoneNumber(String name) {
+    public List<Employee> getEmployeeByPhoneNumber(String name) {
         if (!employeeList.isEmpty()) {
+            List<Employee> resultList = new ArrayList<>();
             for (Employee employee : employeeList) {
-                if (employee.getName().equals(name)) {
-                    System.out.println("Name : " + employee.getName() + ", phone number : " +
-                            employee.getPhoneNumber());
-                }
+                if (employee.getName().equals(name)) resultList.add(employee);
             }
+            return resultList;
         }
+        return null;
     }
 
     public Employee getEmployeeByID(int id) {

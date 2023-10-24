@@ -1,8 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -20,12 +17,15 @@ public class Main {
         employeeList.addEmployee(employee4);
         employeeList.addEmployee(employee5);
 
-        List<Employee> listByExpirience = new ArrayList<>();
-        listByExpirience = employeeList.getEmployeeByExperience(2);
-        System.out.println(listByExpirience.toString());
+        System.out.println("getEmployeeByExperience - usage");
+        System.out.println(employeeList.getEmployeeByExperience(2));
+        System.out.println();
 
-        employeeList.printPhoneNumber("Mary");
+        System.out.println("getEmployeeByPhoneNumber - usage");
+        System.out.println(employeeList.getEmployeeByPhoneNumber("Mary"));
+        System.out.println();
 
+        System.out.println("getEmployeeByID - usage");
         System.out.println(employeeList.getEmployeeByID(1));
 
     }
